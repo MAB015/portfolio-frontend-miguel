@@ -11,17 +11,19 @@ import SectionContainer from '../components/SectionContainer.astro';
 import IconExperience from '../components/icons/IconExperience.astro';
 import IconProject from '../components/icons/IconProject.astro';
 import Project from '../components/Project.astro';
+import H1 from '../components/styles/H1.astro';
+import H2 from '../components/styles/H2.astro';
 ---
 
 <Layout title="Portfolio Miguel Angel | UX Designer and Frontend Developer" description="Contrata a Miguel Angel para diseñar y desarrollar tu website. UX Designer and Frontend Developer, especializado en entender y crear soluciones para los usuarios">
 	<main class="px-4">
 		<SectionContainer class="py-44 pb-32">
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 ">
+			<H1>
 				Hey, soy Miguel Ángel
 				<a href="https://linkedin.com/in/mab015" target="_blank" rel="noopener" class="flex justify-center items-center ">
 					<Badge>Disponible para trabajar</Badge>
 				</a>
-			</h1>
+			</H1>
 
 			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
 				<span>+1 año de experiencia.</span> <span class="text-yellow-200/90">Diseñador UX y Desarrollador Frontend.</span> <span class="text-red-200/90">De Cali-Colombia, viviendo en Paris-Francia.</span> <span class="opacity-70">Especializado en entender y crear soluciones para los usuarios.</span></h2>
@@ -48,18 +50,18 @@ import Project from '../components/Project.astro';
 		</SectionContainer>
 
 		<SectionContainer id="experience">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<H2>
 				<IconExperience class="size-7" />
 				Work Experience
-			</h2>
+			</H2>
 			<Experience />
 		</SectionContainer>
 		
 		<SectionContainer id="experience">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<H2>
 				<IconProject class="size-7" />
 				Projects
-			</h2>
+			</H2>
 			<Project />
 		</SectionContainer>
 	</main>

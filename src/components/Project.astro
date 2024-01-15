@@ -1,6 +1,7 @@
 ---
 import NextJS from "./icons/IconNextJS.astro"
 import Tailwind from "./icons/IconTailwind.astro"
+import H3 from '../components/styles/H3.astro';
 
 const TAGS = {
     NEXT: {
@@ -32,16 +33,18 @@ const PROJECTS = [
         tags: [TAGS.NEXT, TAGS.TAILWIND],
     },
 ]
+
+const
 ---
 
 {
     PROJECTS.map(({ image, title, description, tags }) => (
-        <article>
-            <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+        <article class="mt-10">
+            <H3>
                 {title}
-            </h3>
+            </H3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="flex gap-x-2 flex-row mb-2">
+            <ul class="flex gap-x-2 flex-row mb-4">
                 {tags.map((tag) => (
                     <li>
                         <span
@@ -55,10 +58,20 @@ const PROJECTS = [
             </ul>
             <img
                 loading="lazy"
-                class="rounded shadow-2xl shadow-white/10 aspect-video"
+                class="rounded-xl shadow-2xl shadow-white/10 aspect-video hover:scale-105 transition hover:shadow-yellow-200/30 hover:shadow-xl"
                 src={image}
                 alt={`Captura de pantalla del proyecto ${image}`}
             />
+            <pre>
+                <code>
+                    <img
+                        loading="lazy"
+                        class="rounded-xl shadow-2xl shadow-white/10 aspect-video hover:scale-105 transition hover:shadow-yellow-200/30 hover:shadow-xl"
+                        src={image}
+                        alt={`Captura de pantalla del proyecto ${image}`}
+                    />
+                </code>
+            </pre>
         </article>
     ))
 }
